@@ -21,6 +21,10 @@ namespace AgeBase.ExtendedDistributedCalling.Events
             MediaService.EmptiedRecycleBin += delegate { ExtendedDistributedCallingService.Refresh(); };
             MediaService.Saved += delegate { ExtendedDistributedCallingService.Refresh(); };
             MediaService.Trashed += delegate { ExtendedDistributedCallingService.Refresh(); };
+
+            MemberService.Created += delegate { ExtendedDistributedCallingService.Refresh(); };
+            MemberService.Saved += delegate { ExtendedDistributedCallingService.Refresh(); };
+            MemberService.Deleted += delegate { ExtendedDistributedCallingService.Refresh(); };
         }
     }
 }
